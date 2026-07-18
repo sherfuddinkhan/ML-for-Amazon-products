@@ -9,6 +9,7 @@ from routes.random_forest_routes import random_forest_bp
 from routes.isolation_forest_routes import anomaly_detection_bp
 
 from routes.abc_analysis_routes import analytics_bp
+from routes.apriori_routes import apriori_bp
 
 
 
@@ -24,6 +25,7 @@ app.register_blueprint(linear_regression_bp)
 app.register_blueprint(decision_tree_bp)
 app.register_blueprint(random_forest_bp)
 app.register_blueprint(anomaly_detection_bp)
+app.register_blueprint(apriori_bp,url_prefix="/api")
 app.register_blueprint(analytics_bp,url_prefix="/api")
 
 
